@@ -1,0 +1,279 @@
+/* Reset + Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1a1212;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar, .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Navigation links now pink by default */
+.nav-links a,
+.navbar a {
+    color: #f06292; /* Default pink color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.navbar a:hover {
+    color: #ffc0cb; /* Lighter pink on hover */
+}
+
+/* Hero Section (now uses .about-img for consistent home picture format) */
+.hero {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1a1212, #4a1e2c);
+    border-bottom: 1px solid #333;
+}
+
+/* This class is no longer explicitly used for the home page picture in index.html,
+   but kept here if you have other uses for it. */
+.profile-pic {
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 10px pink;
+    margin-bottom: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero h1 {
+    color: #f06292;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #fce4ec;
+}
+
+/* Section Wrapper (All Pages) */
+section {
+    padding: 60px 20px;
+    background-color: #1a1212; /* Ensures sections are dark */
+    border-bottom: 1px solid #333;
+}
+
+h2 {
+    color: #f06292;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+h3 {
+    margin-top: 25px;
+    color: #ff80ab;
+}
+
+/* About Section */
+/* This targets the <section class="about-section"> in about.html */
+.about-section {
+    padding: 60px 20px;
+    background-color: #1a1212; /* Ensures the about-section background is dark */
+    border-bottom: 1px solid #333; /* Optional: Keep the border if desired */
+}
+
+/* This targets an optional .about-container div, if you choose to use it inside a section */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #1a1212; /* Ensures this container is also dark */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* About Page Image (circular for about.html) */
+.about-page-pic {
+    width: 250px;/* Increased size */
+    height: 250px; /* Increased size(keep equal for perfect circle */
+    border-radius: 50%; /* Makes it circular */
+    border: 2px solid white;
+    box-shadow: 0 0 10px pink;
+    object-fit: cover;
+    margin-bottom: 20px; /* Add some space below the image */
+}
+
+/* Global About Image Format (used for home page now) */
+.about-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px; /* Square with rounded corners */
+    border: 2px solid #f06292;
+    box-shadow: 0 0 10px #f06292;
+    margin-bottom: 20px; /* Added margin for consistency with other images */
+}
+
+/* Skills Section */
+ul {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.1rem;
+    color: #f1ebf0;
+}
+
+/* Buttons (CV or Social) now pink */
+.button,
+.cv-button,
+.social-links a {
+    display: inline-block;
+    background-color: #ff80ab; /* Default pink background for buttons */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 10px auto;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.cv-button:hover,
+.social-links a:hover {
+    background-color: #f06292; /* Darker pink on hover */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-container p {
+        text-align: center;
+    }
+}
+
+/* Contact Form Specific Styles */
+main.content-section form {
+    max-width: 600px; /* Limit form width for better readability */
+    margin: 30px auto; /* Center the form and add vertical space */
+    padding: 25px;
+    background-color: #261820; /* Slightly lighter dark background for the form itself */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: left; /* Align form content to the left */
+}
+
+main.content-section form label {
+    display: block; /* Make labels take full width */
+    margin-bottom: 8px;
+    margin-top: 15px;
+    color: #f1ebf0; /* Light text for labels */
+    font-weight: bold;
+}
+
+main.content-section form input[type="text"],
+main.content-section form input[type="email"],
+main.content-section form textarea {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #4a1e2c; /* Darker pink border */
+    border-radius: 5px;
+    background-color: #1a1212; /* Dark input background */
+    color: #ffffff; /* White text inside inputs */
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+main.content-section form input[type="text"]:focus,
+main.content-section form input[type="email"]:focus,
+main.content-section form textarea:focus {
+    border-color: #f06292; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px #f06292; /* Subtle glow on focus */
+}
+
+main.content-section form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+main.content-section form .button {
+    width: auto; /* Button should not take full width */
+    padding: 12px 25px; /* Adjust padding for buttons */
+    margin-top: 20px;
+    cursor: pointer;
+    border: none; /* Remove default button border */
+}
+
+/* Quotes Section Styling */
+.quotes-section {
+    background-color: #1f1f1f;
+    color: #fce4ec;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 192, 203, 0.3);
+}
+
+.quotes-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff80ab;
+}
+
+.quotes-section blockquote {
+    font-style: italic;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-left: 4px solid #ff80ab;
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Force update */
