@@ -112,7 +112,7 @@ This portfolio serves as a **digital resume and technical showcase**. It is desi
 1. **Clone the repository**
 ```bash
 git clone https://github.com/MthunziMalebadi/YourRepoName.git
-cd YourRepoName
+
 ````
 
 2. **Open the site locally**
@@ -140,7 +140,4 @@ I'm open to internships, collaborations, and exciting AI opportunities. Let’s 
 
 This project is open source and available under the [MIT License](LICENSE).
 
-```
-
----
 
