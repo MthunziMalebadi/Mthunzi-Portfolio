@@ -1,5 +1,5 @@
 
-# Ntombikayise Malebadi | AI/ML Portfolio
+# Mthunzi Ntombikayise Malebadi | AI/ML Portfolio
 
 Welcome to my personal portfolio repository!   
 This project showcases my journey as an aspiring AI/ML Engineer, featuring my technical skills, hands-on projects, and a deep passion for using artificial intelligence to solve real-world challenges.
