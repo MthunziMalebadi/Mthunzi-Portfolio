@@ -47,7 +47,7 @@ This portfolio serves as a **digital resume and technical showcase**. It is desi
 | Tech           | Purpose                                       |
 |----------------|-----------------------------------------------|
 | HTML5          | Webpage structure                             |
-| CSS3           | Styling                                        |
+| CSS           | Styling                                        |
 | Tailwind CSS   | Utility-first responsive design               |
 | JavaScript     | Dynamic and interactive components            |
 | Chart.js       | Visual data representation in projects        |
